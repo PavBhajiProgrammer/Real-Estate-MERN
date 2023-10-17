@@ -1,0 +1,24 @@
+{
+  "name": "real-estate-mern-web-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swapn7038/real-estate-mern-web-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swapn7038/real-estate-mern-web-app/issues"
+  },
+  "homepage": "https://github.com/swapn7038/real-estate-mern-web-app#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
