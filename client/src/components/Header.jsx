@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="bg-[#d4d4d4]">
       <div className="flex justify-between items-center max-w-61 p-2">
-        <Link to="../App.jsx">
+        <Link to="/">
           <h1 className="m-1">
             <span className=" text-slate-700 ">Swapnil</span>
             <span className="font-bold">Esatate</span>
