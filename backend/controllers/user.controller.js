@@ -1,3 +1,5 @@
 export const test = (req, res) => {
-  res.json({ message: "heloo there" });
+  res.json({ message: "Hellooo from test router..." });
 };
+
+export default test;
