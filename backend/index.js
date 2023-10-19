@@ -29,16 +29,24 @@ app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true }));
 // Note - before the route use bodyParser.json()
 
+app.listen(port, () => {
+  console.log(`Server is running on port no ${port}!`);
+});
+
 app.use("/", test);
 app.use("/api/auth", authUser);
-// api/auth/signup
+// localhost:8080/api/auth/signup
 
-app.listen(port, () => {
-  console.log(`listening at port ${port}`);
+// middleware for handling erros
+
+// I don't know why I was using double parenthesis here
+app.use((err, req, res, next) => {
+  // (err, req, res, next) - this should be the order
+  const statusCode = err.statusCode || 500;
+  const message = err.message || "Internal server error";
+  return res.status(statusCode).json({
+    success: false,
+    statusCode,
+    message,
+  });
 });
-
-app.get("/", (req, res) => {
-  res.json({ mes: "hello there" });
-});
-
-// 8080/api/auth/signup
